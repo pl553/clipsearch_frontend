@@ -1,1 +1,1 @@
-export const galleryImagesPerPage: number = 5;
+export const galleryImagesPerPage: number = 15;

@@ -3,7 +3,7 @@
 
 	import { page } from '$app/stores';
 
-	import HeaderNavItem from '../HeaderNavItem.svelte';
+	import HeaderNavItem from '$lib/components/HeaderNavItem.svelte';
 </script>
 
 <div class="container">

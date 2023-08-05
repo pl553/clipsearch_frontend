@@ -25,10 +25,13 @@ export const load = (async ({ fetch, params }) => {
     const gj = await gallery.json();
     
     if (gj && gj['status'] == 'success') {
-        let pageData = gj['data']
-        pageData.page = page
-        pageData.pageCount = pageCount
-        return pageData
+        let data = gj['data']
+        data.paginationData = {
+            currentPage: page,
+            pageCount: pageCount,
+            basePath: '/gallery'
+        }
+        return data
     }
 
     throw error(404, 'Not found');
