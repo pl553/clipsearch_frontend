@@ -1,5 +1,5 @@
 export type PaginationData = {
     currentPage: number;
     pageCount: number;
-    basePath: string;
+    baseUrl: URL;
 }
