@@ -7,10 +7,10 @@
 <Pagination paginationData={data.paginationData} />
 
 <div class="gallery">
-{#each data.image_urls as image_url}
-    <a href={image_url}>
+{#each data.images as image}
+    <a href='/images/{image.id}'>
         <div class="image-box img-thumbnail">
-	        <img src={image_url} alt={image_url} />
+	        <img src={image.source_url} alt={image.source_url} />
         </div>
     </a>
 {/each}
