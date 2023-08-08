@@ -8,24 +8,26 @@
     Add image to gallery
 </h2>
 <form method="POST" class="mb-3" use:enhance>
-    <label for="url" class="form-label">Image url</label>
-    <input
-        type="text"
-        class="form-control {form?.status == 'fail' ? 'is-invalid' : ''}"
-        name="url"
-        autocomplete="off"
-        required
-    />
-    {#if form?.status == "fail"}
-        <div class="invalid-feedback">
-            {form.data.url}
-        </div>
-    {/if}
+    <div>
+        <label for="url" class="form-label">Image URL</label>
+        <input
+            type="text"
+            class="form-control"
+            name="url"
+            autocomplete="off"
+            required
+        />
+    </div>      
 </form>
 
 {#if form?.status == "success"}
 <div class="alert alert-success" role="alert">
     Image added.
+</div>
+{/if}
+{#if form?.status == "fail"}
+<div class="alert alert-danger" role="alert">
+    {form.data.url}
 </div>
 {/if}
 {#if form?.status == "error"}

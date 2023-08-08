@@ -2,12 +2,31 @@
 	export let data;
 </script>
 
-<div>
-    <p>Image id: {data.id}</p>
-    <p>Source url: <a href={data.sourceUrl}>{data.sourceUrl}</a></p>
-    <p>Sha256 hash: {data.sha256}</p>
-</div>
-
 <a href={data.sourceUrl} target="_blank">
     <img class="img-fluid" src="{data.sourceUrl}" alt="{data.sourceUrl}">
 </a>
+
+<div class="row">
+    <div class="col-2">
+        Image ID
+    </div>
+    <div class="col">
+        {data.id}
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        Source URL
+    </div>
+    <div class="col text-break">
+        <a href={data.sourceUrl}>{data.sourceUrl}</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        SHA256 Hash
+    </div>
+    <div class="col text-break">
+        {data.sha256}
+    </div>
+</div>
