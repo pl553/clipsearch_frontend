@@ -7,11 +7,7 @@ export const load = (async ({ fetch, url, params }) => {
     const imageData = await image.json();
     
     if (imageData && imageData['status'] == 'success') {
-        let data = imageData['data']
-        return {
-            id: data.id,
-            sourceUrl: data.source_url
-        }
+        return imageData['data']
     }
 
     throw error(404, 'Not found');

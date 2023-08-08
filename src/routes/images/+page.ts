@@ -8,7 +8,7 @@ export const load = (async ({ fetch, url }) => {
     const apiPath = '/api/images'
     const countResponse = await fetch(apiPath)
     const countResponseJson = await countResponse.json();
-    const count: number = countResponseJson.data.image_count
+    const count: number = countResponseJson.data.imageCount
     const pageCount = Math.ceil(count / galleryImagesPerPage)
     const page = url.searchParams.get('page') === null ? 1 : Number(url.searchParams.get('page'))
 

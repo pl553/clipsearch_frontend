@@ -10,7 +10,7 @@
 {#each data.images as image}
     <a href='/images/{image.id}'>
         <div class="image-box img-thumbnail">
-	        <img src={image.source_url} alt={image.source_url} />
+	        <img src={image.sourceUrl} alt={image.sourceUrl} />
         </div>
     </a>
 {/each}
