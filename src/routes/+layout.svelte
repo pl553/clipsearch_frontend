@@ -11,6 +11,7 @@
 		<ul class="nav nav-pills">
 			<HeaderNavItem path="/" routeId="/" name="Home" />
 			<HeaderNavItem path="/images" routeId="/images" name="Images" />
+			<HeaderNavItem path="/images/search" routeId="/images/search" name="Search" />
 			<HeaderNavItem path="/images/add" routeId="/images/add" name="Add image" />
 		</ul>
 	</header>

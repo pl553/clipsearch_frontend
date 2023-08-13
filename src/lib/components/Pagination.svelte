@@ -15,6 +15,7 @@ import type { PaginationData } from '$lib/pagination';
     }
 </script>
 
+{#if pageCount > 0}
 <nav aria-label="Page navigation">
 	<ul class="pagination justify-content-center">
         <li class="page-item {currentPage === 1 ? 'disabled' : ''}">
@@ -39,3 +40,4 @@ import type { PaginationData } from '$lib/pagination';
         </li>
 	</ul>
 </nav>
+{/if}
