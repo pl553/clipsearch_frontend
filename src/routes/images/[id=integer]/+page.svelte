@@ -22,7 +22,7 @@
         <a href={data.sourceUrl}>{data.sourceUrl}</a>
     </div>
 </div>
-<div class="row">
+<div class="row mb-3">
     <div class="col-2">
         SHA256 Hash
     </div>
@@ -30,3 +30,6 @@
         {data.sha256}
     </div>
 </div>
+<form method="POST" action="?/delete">
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>

@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
-export const load = (async ({ fetch, url, params }) => {
+export const load = (async ({ fetch, params }) => {
     const image = await fetch('/api/images/' + params.id.toString())
 
     const imageData = await image.json();

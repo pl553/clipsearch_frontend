@@ -6,7 +6,7 @@
     {#each images as image}
         <a href='/images/{image.id}'>
             <div class="image-box img-thumbnail">
-                <img src={image.thumbnailUrl} alt={image.thumbnailUrl} />
+                <img src={image.thumbnailUrl} alt={image.score ?? image.thumbnailUrl} title={image.score} />
             </div>
         </a>
     {/each}
