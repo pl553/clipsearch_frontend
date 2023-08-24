@@ -5,6 +5,17 @@ import { galleryImagesPerPage } from '$lib/config';
 import type { PaginationData } from '$lib/pagination';
 
 export const load = (async ({ fetch, url }) => {
+    if (url.searchParams.get('q') === null) {
+        let data: any = {}
+        data.paginationData = <PaginationData>{
+            currentPage: 1,
+            pageCount: 0,
+            baseUrl: url
+        }
+        data.images = []
+        return data
+    }
+
     const page = url.searchParams.get('page') === null ? 1 : Number(url.searchParams.get('page'))
     const offset = (page - 1) * galleryImagesPerPage
 
